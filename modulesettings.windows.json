@@ -1,0 +1,10 @@
+{
+  "Modules": {
+
+    "ObjectDetectionYOLOv5-3.1": {
+      "LaunchSettings": {
+        "Runtime": "python3.7"
+      }
+    }
+  }
+}
