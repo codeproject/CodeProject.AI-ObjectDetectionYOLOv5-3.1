@@ -3,7 +3,7 @@
 
     "ObjectDetectionYOLOv5-3.1": {
       "Name": "Object Detection (YOLOv5 3.1)",
-      "Version": "1.10.0",
+      "Version": "1.11.0",
 
       "PublishingInfo" : {
         "Description": "Provides Object Detection using YOLOv5 3.1 targeting CUDA 10 or 11 for older GPUs.",
@@ -67,9 +67,10 @@
           { "ModuleVersion": "1.8.3",  "ServerVersionRange": [ "2.5.0-RC6", ""   ], "ReleaseDate": "2024-01-18", "ReleaseNotes": "Updated explorer" },
           { "ModuleVersion": "1.9.0",  "ServerVersionRange": [ "2.5.0-RC6", ""   ], "ReleaseDate": "2024-01-21", "ReleaseNotes": "Module performance statistics added" },
           { "ModuleVersion": "1.9.1",  "ServerVersionRange": [ "2.5.2", "2.6.0"  ], "ReleaseDate": "2024-02-08", "ReleaseNotes": "Support for CodeProject.AI Server 2.5.2" },
-          { "ModuleVersion": "1.9.2",  "ServerVersionRange": [ "2.6.1", ""       ], "ReleaseDate": "2024-04-01", "ReleaseNotes": "Tweaked settings for RPi docker" },
-          { "ModuleVersion": "1.9.3",  "ServerVersionRange": [ "2.6.1", ""       ], "ReleaseDate": "2024-04-01", "ReleaseNotes": "Corrections to PIPs" },
-          { "ModuleVersion": "1.10.0", "ServerVersionRange": [ "2.6.5", ""       ], "ReleaseDate": "2024-04-25", "ReleaseNotes": "Updated for CodeProject.AI Server 2.7" }
+          { "ModuleVersion": "1.9.2",  "ServerVersionRange": [ "2.6.1", "2.7.0"  ], "ReleaseDate": "2024-04-01", "ReleaseNotes": "Tweaked settings for RPi docker" },
+          { "ModuleVersion": "1.9.3",  "ServerVersionRange": [ "2.6.1", "2.7.0"  ], "ReleaseDate": "2024-04-01", "ReleaseNotes": "Corrections to PIPs" },
+          { "ModuleVersion": "1.10.0", "ServerVersionRange": [ "2.6.5", "2.7.0"  ], "ReleaseDate": "2024-04-25", "ReleaseNotes": "Updated for CodeProject.AI Server 2.7" },
+          { "ModuleVersion": "1.11.0", "ServerVersionRange": [ "2.8.0", ""       ], "ReleaseDate": "2024-08-02", "ReleaseNotes": "Updated for server 2.8" }
         ]
       },
 
