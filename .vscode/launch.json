@@ -30,7 +30,8 @@
                 "python": "${workspaceFolder}/bin/windows/python37/venv/Scripts/python.exe"
             },
             "linux": {
-                "python": "${workspaceFolder}/bin/linux/python38/venv/bin/python",
+                // "python": "${workspaceFolder}/../../CodeProject.AI-Server/runtimes/bin/ubuntu/python38/venv/bin/python",
+                "python": "${workspaceFolder}/../../CodeProject.AI-Server/runtimes/bin/debian/python38/venv/bin/python",
             },
             "osx": {
                 "python": "${workspaceFolder}/bin/macos/python38/venv/bin/python",
@@ -62,8 +63,6 @@
                 "OPENBLAS_CORETYPE": "ARMV8", // needed for Jetson
                 "LD_PRELOAD": "/usr/lib/aarch64-linux-gnu/libgomp.so.1"
             },
-
-            "python": "${workspaceFolder}/bin/linux/python38/venv/bin/python"
         }
     ]
 }
