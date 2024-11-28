@@ -10,16 +10,13 @@ Matplotlib       # Installing Matplotlib, the Python plotting package
 ## For CUDA 11.7
 # AttributeError: 'Upsample' object has no attribute 'recompute_scale_factor'
 # https://github.com/ultralytics/yolov5/issues/6948
---find-links https://download.pytorch.org/whl/torch_stable.html
-torch==1.13.0+cu117     # Installing PyTorch, an open source machine learning framework
---find-links https://download.pytorch.org/whl/torch_stable.html
-torchvision==0.14.0+cu117 # Installing TorchVision, for working with computer vision models
+#--find-links https://download.pytorch.org/whl/torch_stable.html
+#torch==1.13.0+cu117     # Installing PyTorch, an open source machine learning framework
+#--find-links https://download.pytorch.org/whl/torch_stable.html
+#torchvision==0.14.0+cu117 # Installing TorchVision, for working with computer vision models
 
-# This is recommended, but there is no torchvision==0.11.2+cu111
-#  -f https://download.pytorch.org/whl/torch_stable.html
-# torch==1.10.1+cu111
-#  -f https://download.pytorch.org/whl/torch_stable.html
-# torchvision==0.11.2+cu111
+torch                         # Installing PyTorch, an open source machine learning framework
+torchvision                   # Installing TorchVision, for working with computer vision models
 
 CodeProject-AI-SDK            # Installing the CodeProject.AI SDK
 
