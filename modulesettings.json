@@ -3,7 +3,7 @@
 
     "ObjectDetectionYOLOv5-3.1": {
       "Name": "Object Detection (YOLOv5 3.1)",
-      "Version": "1.12.0",
+      "Version": "1.12.1",
 
       "PublishingInfo" : {
         "Description": "Provides Object Detection using YOLOv5 3.1 targeting CUDA 10 or 11 for older GPUs.",
@@ -70,8 +70,9 @@
           { "ModuleVersion": "1.9.2",  "ServerVersionRange": [ "2.6.1", "2.7.0"  ], "ReleaseDate": "2024-04-01", "ReleaseNotes": "Tweaked settings for RPi docker" },
           { "ModuleVersion": "1.9.3",  "ServerVersionRange": [ "2.6.1", "2.7.0"  ], "ReleaseDate": "2024-04-01", "ReleaseNotes": "Corrections to PIPs" },
           { "ModuleVersion": "1.10.0", "ServerVersionRange": [ "2.6.5", "2.7.0"  ], "ReleaseDate": "2024-04-25", "ReleaseNotes": "Updated for CodeProject.AI Server 2.7" },
-          { "ModuleVersion": "1.11.0", "ServerVersionRange": [ "2.8.0", ""       ], "ReleaseDate": "2024-08-02", "ReleaseNotes": "Updated for server 2.8" },
-          { "ModuleVersion": "1.12.0", "ServerVersionRange": [ "2.8.0",     ""   ], "ReleaseDate": "2024-11-23", "ReleaseNotes": "Improved CUDA 12 support" }
+          { "ModuleVersion": "1.11.0", "ServerVersionRange": [ "2.8.0", "2.9.3"  ], "ReleaseDate": "2024-08-02", "ReleaseNotes": "Updated for server 2.8" },
+          { "ModuleVersion": "1.12.0", "ServerVersionRange": [ "2.8.0", "2.9.3"  ], "ReleaseDate": "2024-11-23", "ReleaseNotes": "Improved CUDA 12 support" },
+          { "ModuleVersion": "1.12.1", "ServerVersionRange": [ "2.9.4",     ""   ], "ReleaseDate": "2024-11-26", "ReleaseNotes": "Support for dual Ubuntu/Debian install" }
         ]
       },
 

@@ -47,7 +47,7 @@ if [ "$edgeDevice" = "Jetson" ]; then
         installAptPackages "libfreetype6-dev python3-dev libjpeg-dev libomp-dev libopenblas-base libopenmpi-dev"
         installPythonPackagesByName "future wheel mock pillow testresources Cython gdown"
 
-        mkdir -p "${downloadDirPath}/${os}/packages/"
+        mkdir -p "${downloadDirPath}/${platform_dir}/packages/"
 
         torch_version="1.11"
         case "$torch_version" in
@@ -81,18 +81,18 @@ if [ "$edgeDevice" = "Jetson" ]; then
 
         "$venvPythonCmdPath" -m pip show torch >/dev/null 2>/dev/null
         if [ $? -gt 0 ]; then
-            if [ ! -f "${downloadDirPath}/${os}/packages/${torch_file}" ]; then
-                sudo gdown https://drive.google.com/uc?id=${torch_id} -O "${downloadDirPath}/${os}/packages/"
+            if [ ! -f "${downloadDirPath}/${platform_dir}/packages/${torch_file}" ]; then
+                sudo gdown https://drive.google.com/uc?id=${torch_id} -O "${downloadDirPath}/${platform_dir}/packages/"
             fi
-            installPythonPackagesByName "${downloadDirPath}/${os}/packages/${torch_file}" "torch"
+            installPythonPackagesByName "${downloadDirPath}/${platform_dir}/packages/${torch_file}" "torch"
         fi
 
         "$venvPythonCmdPath" -m pip show torchvision >/dev/null 2>/dev/null
         if [ $? -gt 0 ]; then
-            if [ ! -f "${downloadDirPath}/${os}/packages/${vision_file}" ]; then
-                sudo gdown https://drive.google.com/uc?id=${vision_id} -O "${downloadDirPath}/${os}/packages/"
+            if [ ! -f "${downloadDirPath}/${platform_dir}/packages/${vision_file}" ]; then
+                sudo gdown https://drive.google.com/uc?id=${vision_id} -O "${downloadDirPath}/${platform_dir}/packages/"
             fi
-            installPythonPackagesByName "${downloadDirPath}/${os}/packages/${vision_file}" "torchvision"
+            installPythonPackagesByName "${downloadDirPath}/${platform_dir}/packages/${vision_file}" "torchvision"
         fi
 
         installAptPackages "zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev"
