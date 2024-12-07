@@ -6,6 +6,7 @@ import torch.nn as nn
 from models.common import Conv, DWConv
 from utils.google_utils import attempt_download
 
+from packaging import version
 
 class CrossConv(nn.Module):
     # Cross Convolution Downsample
@@ -155,9 +156,18 @@ def attempt_load(weights, map_location=None):
     model = Ensemble()
     for w in weights if isinstance(weights, list) else [weights]:
         attempt_download(w)
-        model.append(
-            torch.load(w, map_location=map_location)["model"].float().fuse().eval()
-        )  # load FP32 model
+
+        if version.parse(torch.__version__) > version.parse("1.15"):
+            # We need to use weights_only=False for our model. If there are objects
+            # that need to be registered to allow the load to happen, register them
+            # here
+            # torch.serialization.add_safe_globals({'MyCustomClass': MyCustomClass})
+
+            m = torch.load(w, map_location=map_location, weights_only=False)
+        else:
+            m = torch.load(w, map_location=map_location)
+
+        model.append(m["model"].float().fuse().eval())  # load FP32 model
 
     if len(model) == 1:
         return model[-1]  # return model
